@@ -8,7 +8,7 @@ This project represents a simple **Medical Appointment Booking System** built us
 
 - ✅ SQL script to create tables (`medical_appointment_schema.sql`)
 - ✅ Insert queries for sample data
-- ✅ ER Diagram screenshots
+- ✅ ER Diagram screenshot
 - ✅ Built and tested using **PostgreSQL** with **pgAdmin 4**
 - ✅ ER model designed using [dbdiagram.io](https://dbdiagram.io)
 
@@ -29,18 +29,19 @@ This project represents a simple **Medical Appointment Booking System** built us
 
 ## 🗂️ Schema Snapshot (ER Diagram)
 
-![ER Diagram](https://raw.githubusercontent.com/Ankitatiwary21/medical-appointment-sql/main/your-er-diagram-file.png)
-
-> Replace `your-er-diagram-file.png` with the actual file name after upload.
+![ER Diagram](https://github.com/Ankitatiwary21/medical-appointment-sql/blob/main/Screenshot_20250623_080456.png)
 
 ---
 
-## 🧪 Sample Queries
-
-To view all appointments:
+## 🧪 Sample Query: View Appointments
 
 ```sql
-SELECT a.AppointmentID, p.Name AS Patient, d.Name AS Doctor, s.SlotTime, a.AppointmentDate
+SELECT 
+  a.AppointmentID, 
+  p.Name AS Patient, 
+  d.Name AS Doctor, 
+  s.SlotTime, 
+  a.AppointmentDate
 FROM Appointments a
 JOIN Patients p ON a.PatientID = p.PatientID
 JOIN Doctors d ON a.DoctorID = d.DoctorID
